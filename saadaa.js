@@ -204,7 +204,7 @@ stars.forEach((star, index) => {
 // first fill the message then stars clicked
 messageBox.addEventListener("keyup", () => {
   if (messageBox.value.trim() !== "") {
-    console.log(messageBox.value);
+    // console.log(messageBox.value);
     checkButtonState(); // Enable button if conditions met
   }
 });
@@ -241,6 +241,7 @@ function checkButtonState() {
 // Enable button and show check icon when "Rate Now" clicked
 rateNowBtn.addEventListener("click", () => {
   if (rateNowBtn.classList.contains("active")) {
+    checkIcon.className = "fa-check fa-solid check-icon";
     checkIcon.style.display = "block"; // Show check icon
     checkIcon.style.position = "absolute"; // Make sure it's positioned correctly on top of the color box
     checkIcon.style.top = "50%"; // Position it within the color box
